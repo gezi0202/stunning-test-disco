@@ -1,11 +1,11 @@
 .box{
     height: 100%;
     width: 37.5rem;
-    background: pink;
     display: flex;
     flex-direction: column;
 }
 header{
+    flex-shrink:0;
     height: 4rem;
     width: 100%;
     background: #2C2C2C;
@@ -22,8 +22,9 @@ header{
 
 }
 .tab{
-    height: 3rem;
+    height: 4rem;
     width: 37.5rem;
+    line-height: 4rem;
     background: #fff;
     .list{
         display: flex;
@@ -41,17 +42,60 @@ header{
     width: 37.5rem;
     flex: 1;
     overflow: hidden;
-    .listCon{
+    .allList{
         overflow: scroll;
-        display: flex;
         width: 100%;
         flex-wrap: wrap;
+        display: none;
         dl{
-            width: 50%;
+            float: left;
+            width: 46%;
             height: 20rem;
+            margin-right: 1rem;
         }
-        dl dt{
-            background: pink;
+        dl dt img{
+            width: 17rem;
+            height: 16rem;
         }
     }
+    .soldList{
+        overflow: scroll;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+        display: none;
+        dl{
+            float: left;
+            width: 46%;
+            height: 20rem;
+            margin-right: 1rem;
+        }
+        dl dt img{
+            width: 17rem;
+            height: 16rem;
+        }
+    }
+    .newList{
+        overflow: scroll;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+        display: none;
+        dl{
+            float: left;
+            width: 46%;
+            height: 20rem;
+            margin-right: 1rem;
+        }
+        dl dt img{
+            width: 17rem;
+            height: 16rem;
+        }
+    }
+}
+.show{
+    display: block!important;
+}
+.active{
+    color: orangered;
 }
