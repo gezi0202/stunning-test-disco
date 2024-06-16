@@ -28,7 +28,8 @@ module.exports = { //配置的是如何输入，如何输出
         //[hash:8] 根据文件内容生成ha xi zhi ,防止代码更新时用户读取缓存
         filename:'js/[name].[hash:8].js',
         clean:true,//自动删除之前打包的文件
-        assetModuleFilename:'imgs/[name].[hash:8][ext]'//图片名称
+        assetModuleFilename:'imgs/[name].[hash:8][ext]'//图片名称assetModuleFilename:'imgs/[name].[hash:8][ext]'//图片名称
+
     },
     module:{ 
         //可以添加很多种规则  配置各种loader， loader的作用就是解析除了js和json以外的文件
@@ -43,11 +44,11 @@ module.exports = { //配置的是如何输入，如何输出
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource', //使用webpack5 内置的资源管理模块处理图片
-                // parser:{
-                //     dataUrlCondition:{
-                //         maxSize: 15*1024   //4kb
-                //     }
-                // }
+                parser:{
+                    dataUrlCondition:{
+                        maxSize: 15*1024   //4kb
+                    }
+                }
             },
             {
             test: /\.html$/,
@@ -80,18 +81,11 @@ module.exports = { //配置的是如何输入，如何输出
     devServer:{ //配置本地开发服务器
         port:12171,
         open:true, //自动打开浏览器
-        // proxy:[  //旧的版本
-        //     '/api':{
-        //         targat:'http://ustbhuangyi.com',
-        //         pathRewrite: { '^/api': '' },
-        //         changeOrigin:true,
-        //     }
-        // ],
         proxy: [  //proxy的作用 用来处理跨域问题
             {
             //当请求/api/abc——————>然后会转发到 http://ustbhuangyi.com/abc
               context: ['/api'],
-              target: 'http://ustbhuangyi.com',
+              target: 'https://zyxcl.xyz/exam_api/zh',
               pathRewrite: { '^/api': '' },
               changeOrigin:true,
             },
