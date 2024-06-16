@@ -1,11 +1,29 @@
-body{
-    background: skyblue;
-    h1{
-        background: tomato;
-        color: #fff!important;
+.box{
+    height: 100%;
+    width: 37.5rem;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: 4rem;
+    width: 100%;
+    background: #2C2C2C;
+    padding: .5rem .5rem;
+    .search{
+        display: flex;
+        .sc{
+            display: flex;
+        }
+        .sc p{
+            font-size: 3rem;
+            color: #ccc;
+            line-height: 4rem;
+        }
     }
-    img{
-        width: 150px;
-        height: 150px;
+    .search img{
+        height:3rem;
+        width: 3rem;
     }
+    
 }

@@ -17,7 +17,9 @@ module.exports = { //配置的是如何输入，如何输出
     //多入口 多个出口
     entry:{
         app1:'./src/index/index.js',
-        app2:'./src/details/details.js'
+        app2:'./src/details/details.js',
+        app3:'./src/search/search.js'
+
     },
     devtool:'source-map',//添加源代码和打包后代码的映射关系
     output:{
@@ -76,7 +78,7 @@ module.exports = { //配置的是如何输入，如何输出
         })
     ],
     devServer:{ //配置本地开发服务器
-        port:10001,
+        port:12171,
         open:true, //自动打开浏览器
         // proxy:[  //旧的版本
         //     '/api':{
