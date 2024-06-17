@@ -3,6 +3,7 @@ import"../common/common.scss";
 import axios from 'axios'
 
 render( el(".allList") ,'https://zyxcl.xyz/exam_api/zh')
+
 async function render(page , address){
     const res = await axios.get(address)
     console.log(res.data.items);
@@ -12,7 +13,7 @@ async function render(page , address){
                 <dt><img src="${item.img}" alt=""></dt>
                 <dd>
                 <p>${item.title}</p>
-                <p>月销${item.New}笔</p>
+                <p>月销${item.sold}笔</p>
                 <p>￥${item.price}</p>
                 </dd>
             </dl>
@@ -20,6 +21,7 @@ async function render(page , address){
     }).join("")
 
 }
+
 el(".all").addEventListener("click",()=>{
     el(".active").classList.remove("active");
     el(".all").classList.add("active");
@@ -53,7 +55,7 @@ el("sort")
 // document.addEventListener("click",(e)=>{
 //     let target = e.target;
 //     if(target.nodeName === "DL"){
-
+//         console.log(123);
 //     }
 // })
 

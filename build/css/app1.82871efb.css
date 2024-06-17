@@ -1,0 +1,143 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index/index.scss ***!
+  \***************************************************************************************************************/
+.box {
+  height: 100%;
+  width: 37.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-shrink: 0;
+  height: 4rem;
+  width: 100%;
+  background: #2C2C2C;
+  padding: 0.5rem 0.5rem;
+}
+header .search input {
+  height: 3rem;
+  width: 35rem;
+  outline: 0;
+  border-radius: 1rem;
+  background: #4d4c4c;
+  padding: 2rem;
+  color: #fff;
+}
+
+.tab {
+  height: 4rem;
+  width: 37.5rem;
+  line-height: 4rem;
+  background: #fff;
+}
+.tab .list {
+  display: flex;
+}
+.tab .list li {
+  margin-left: 2.5rem;
+  font-size: 1.6rem;
+}
+.tab .list .li img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.scroll {
+  width: 37.5rem;
+  flex: 1;
+  overflow: hidden;
+}
+.scroll .allList {
+  overflow: scroll;
+  width: 100%;
+  flex-wrap: wrap;
+  display: none;
+}
+.scroll .allList dl {
+  float: left;
+  width: 46%;
+  height: 20rem;
+  margin-right: 1rem;
+  pointer-events: none;
+}
+.scroll .allList dl dt img {
+  width: 17rem;
+  height: 16rem;
+}
+.scroll .allList dd p {
+  pointer-events: none;
+}
+.scroll .soldList {
+  overflow: scroll;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+  display: none;
+}
+.scroll .soldList dl {
+  float: left;
+  width: 46%;
+  height: 20rem;
+  margin-right: 1rem;
+}
+.scroll .soldList dl dt img {
+  width: 17rem;
+  height: 16rem;
+}
+.scroll .newList {
+  overflow: scroll;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+  display: none;
+}
+.scroll .newList dl {
+  float: left;
+  width: 46%;
+  height: 20rem;
+  margin-right: 1rem;
+}
+.scroll .newList dl dt img {
+  width: 17rem;
+  height: 16rem;
+}
+
+.show {
+  display: block !important;
+}
+
+.active {
+  color: orangered;
+}
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/common.scss ***!
+  \*****************************************************************************************************************/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 2.6666666667vw;
+  background: #F4F4F4;
+}
+
+/*# sourceMappingURL=app1.82871efb.css.map*/

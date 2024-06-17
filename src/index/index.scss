@@ -52,10 +52,14 @@ header{
             width: 46%;
             height: 20rem;
             margin-right: 1rem;
+            pointer-events: none;
         }
         dl dt img{
             width: 17rem;
             height: 16rem;
+        }
+        dd p{
+            pointer-events: none;
         }
     }
     .soldList{

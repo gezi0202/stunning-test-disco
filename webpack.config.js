@@ -72,6 +72,11 @@ module.exports = { //配置的是如何输入，如何输出
             filename:'details.html', 
             chunks:['app2']//设置引入的js文件(要引入的模块)
         }),
+        new HtmlWebpackPlugin({//复制HTML 文件，自动把生成的js引入到html
+            template:'./src/search.html',
+            filename:'search.html', 
+            chunks:['app3']//设置引入的js文件(要引入的模块)
+        }),
         //配置抽离css文件
         new MiniCssExtractPlugin({
             filename:'css/[name].[hash:8].css'
